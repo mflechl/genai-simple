@@ -94,7 +94,11 @@ def main(n_examples=500):
     clear_cache()
 
     # Using Llama-2, 5 epochs
-    model = LudwigModel(config="config_ft.yaml", logging_level=logging.INFO)
+    if n_examples <= 10:
+        model = LudwigModel(config="config_ft_cpu.yaml", logging_level=logging.INFO)
+    else:
+        model = LudwigModel(config="config_ft.yaml", logging_level=logging.INFO)
+
 #    results = model.train(dataset=main_df)
     model.train(dataset=main_df)
 

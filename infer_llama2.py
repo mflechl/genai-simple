@@ -5,7 +5,7 @@ from ludwig.api import LudwigModel
 
 MODELDIR = "results/api_experiment_run/model/"
 
-def main():
+def main(n_examples=-1):
     '''main function for inference with Llama2'''
 
 
@@ -38,7 +38,7 @@ def main():
         ]
     )
 
-    predictions, _ = model.predict(dataset=test_examples)
+    predictions, _ = model.predict(dataset=test_examples.iloc[:n_examples])
     print(predictions)
 
     for input_with_prediction in zip(
