@@ -21,7 +21,7 @@ def clear_cache():
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
-def main(n_examples=500):
+def main(n_examples=500, is_test=False):
     '''main function to run run fine-tuning'''
 
     # os.environ["HUGGING_FACE_HUB_TOKEN"] = getpass.getpass("Token:")
@@ -99,8 +99,9 @@ def main(n_examples=500):
     else:
         model = LudwigModel(config="config_ft.yaml", logging_level=logging.INFO)
 
-#    results = model.train(dataset=main_df)
-    model.train(dataset=main_df)
+    if not is_test:
+        #    results = model.train(dataset=main_df)
+        model.train(dataset=main_df)
 
     return 0
 
