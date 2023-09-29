@@ -8,4 +8,5 @@ ludwig
 ludwig[llm]
 transformers
 matplotlib
-
+accelerate
+bitsandbytes
