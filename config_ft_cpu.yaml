@@ -40,8 +40,8 @@ trainer:
   type: finetune
   epochs: 1
   batch_size: 1
-  eval_batch_size: 2
-  gradient_accumulation_steps: 16
+  eval_batch_size: 1
+  gradient_accumulation_steps: 1
   learning_rate: 0.0004
   learning_rate_scheduler:
     warmup_fraction: 0.03

@@ -6,7 +6,8 @@ install:
 	wget https://huggingface.co/datasets/ArtifactAI/arxiv-physics-instruct-tune-30k/resolve/main/arxiv_physics_instruct_30k.jsonl
 
 test:
-	python -m pytest -vv test_*.py
+	python -m pytest -vv test_ft*.py
+#	python -m pytest -vv test_*.py
 #	python -m pytest -vv --cov=ft_llama2 test_*.py
 
 format:	
