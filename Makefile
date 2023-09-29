@@ -2,6 +2,9 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
+	wget https://huggingface.co/datasets/ArtifactAI/arxiv-math-instruct-50k/resolve/main/arxiv_math_instruct_50k.jsonl
+	wget https://huggingface.co/datasets/ArtifactAI/arxiv-physics-instruct-tune-30k/resolve/main/arxiv_physics_instruct_30k.jsonl
+
 test:
 	python -m pytest -vv --cov=main --cov=libs test_*.py
 

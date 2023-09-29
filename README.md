@@ -1,9 +1,6 @@
-[![CI](https://github.com/mflechl/python-ci-template/actions/workflows/main.yml/badge.svg)](https://github.com/mflechl/python-ci-template/actions/workflows/main.yml)
+[![CI](https://github.com/mflechl/genai-simple/actions/workflows/main.yml/badge.svg)](https://github.com/mflechl/genai-simple/actions/workflows/main.yml)
 
-# python-ci-template
-Template for a Python project using CI
+# genai-simple
+some simple python scripts for GenAI examples
 
-# to stop Codespaces
-Ctrl+Shift+P
-type "stop" and select "Codespaces:Stop"
-select the one you want to stop
+
